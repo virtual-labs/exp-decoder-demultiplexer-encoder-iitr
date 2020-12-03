@@ -1,1 +1,1 @@
-## Experiment name
+## Implementation and verification of decoder/de-multiplexer and encoder using logic gates.
