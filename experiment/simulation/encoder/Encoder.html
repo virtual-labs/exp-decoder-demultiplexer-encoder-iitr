@@ -139,7 +139,7 @@ div.abc
       </a>
     </div>
 </div>
-<div id="wrapper" style="position:absolute; border: 2px solid #3385ff; top:100px;width:1250px;height:600px;left:20px">
+<div id="wrapper" style="position:absolute; border: 2px solid #3385ff; top:100px;width:1250px;height:700px;left:20px">
   <div style="position:absolute; font-size:14px;background-color: blue;top:5px;left:0px;width:400px; height:40px;font-weight: bold;">
     <p style="text-align:center; color:white;font-family: Verdana"> 
       <b>Experiment to perform logic of 4x2 Encoder</b>
@@ -153,9 +153,6 @@ div.abc
   <form id="myForm">
 
 
-<!--<div style="position:absolute;left:700px;top:10px;">
-<input style=" background: #27d447 !important;height:30px; width:90px"; id = "button" type = "button" value = "ADD" onclick="AddData()"></label>-->
-  <!--<button style=" background: #27d447  !important;height:30px; width:90px"  type="reset" value="Clear"  onclick="clearForm()">Reset</button>-->
 
 </div>
 
@@ -170,16 +167,11 @@ div.abc
   </tr>
 </div>
 
-   <div style="position:absolute;left:151px;top:230px;" >
+   <div style="position:absolute;left:151px;top:315px;" >
     <table width="0%" border=0>
      <tr>
       <td>
-        <p style="color:blue;font-size: 11px;" align="center">D0</p>
-          <img id="A" onclick="changeImage()" src="switchoff.png" width="70" height="40">
-      </td>
-    </tr>
-      <td>
-        <p style="color:blue;font-size: 11px;" align="center">D1</p>
+        <p style="color:blue;font-size: 11px;" align="center">D3</p>
 
         <img id="B" onclick="changeImage1()" src="switchoff.png" width="70" height="40">
           
@@ -193,12 +185,18 @@ div.abc
 </td>
        </tr>
        <td>
-        <p style="color:blue;font-size: 11px;" align="center">D3</p>
+        <p style="color:blue;font-size: 11px;" align="center">D1</p>
 
         <img id="D" onclick="changeImage4()" src="switchoff.png" width="70" height="40">
           
 </td>
        </tr>
+       <tr>
+      <td>
+        <p style="color:blue;font-size: 11px;" align="center">D0</p>
+          <img id="A" onclick="changeImage()" src="switchoff.png" width="70" height="40">
+      </td>
+    </tr>
      </table>
    </div>
 
@@ -230,8 +228,8 @@ div.abc
 
 
                                             <!--D0-->
-<img style="position: absolute;left: 222px;top:285px;"id="myImage12" src="redn.jpg" style="width:5px" width="130" height="2">
-<img style="position: absolute;left: 345px;top:283px;"id="myImage15" src="red.png" style="width:5px" width="7" height="7">
+<img style="position: absolute;left: 222px;top:615px;"id="myImage12" src="redn.jpg" style="width:5px" width="130" height="2">
+<img style="position: absolute;left: 345px;top:613px;"id="myImage15" src="red.png" style="width:5px" width="7" height="7">
 
 
                                             <!--D1-->
@@ -263,7 +261,8 @@ div.abc
 <img style="position: absolute;left:809px;top:363.5px;"id="myImage23" src="redn.jpg" style="width:5px" width="37" height="2">
 <img style="position: absolute;left:745px;top:412px;"id="myImage24" src="redn.jpg" style="width:5px" width="15" height="2">
 <img style="position: absolute;left:845px;top:364px;"id="myImage23" src="redn.jpg" style="width:5px" width="2" height="109">
-<img style="position: absolute;left:760px;top:412px;"id="myImage24" src="redn.jpg" style="width:5px" width="2" height="115">
+<img style="position: absolute;left:760px;top:412px;"id="myImage24" src="redn.jpg" style="width:5px" width="2" height="60">
+<img style="position: absolute;left:760px;top:490px;"id="myImage24" src="redn.jpg" style="width:5px" width="2" height="35">
 <img style="position: absolute;left:845px;top:480px;"id="myImage23" src="redn.jpg" style="width:5px" width="2" height="45">
 <img style="position: absolute;left:760px;top:480px;"id="myImage24" src="redn.jpg" style="width:5px" width="2" height="30">
 <img style="position: absolute;left:760px;top:525px;"id="myImage23" src="redn.jpg" style="width:5px" width="88" height="2">
@@ -631,8 +630,9 @@ function Glow()
     }
     if(e.src.match("switchoff")&& f.src.match("switchoff")&& g.src.match("switchon")&& h.src.match("switchoff"))
     {
-       document.getElementById("Y1").src="off.png";
-       document.getElementById("Y0").src="on.png";   
+      document.getElementById("Y1").src="on.png";
+       document.getElementById("Y0").src="on.png";
+       
     }
     if(e.src.match("switchoff")&& f.src.match("switchon")&& g.src.match("switchoff")&& h.src.match("switchoff"))
     {
@@ -641,8 +641,8 @@ function Glow()
     }
     if(e.src.match("switchon")&& f.src.match("switchoff")&& g.src.match("switchoff")&& h.src.match("switchoff"))
     {
-       document.getElementById("Y1").src="on.png";
-       document.getElementById("Y0").src="on.png";
+         document.getElementById("Y1").src="off.png";
+       document.getElementById("Y0").src="on.png"; 
     }
     if(e.src.match("switchoff")&& f.src.match("switchoff")&& g.src.match("switchoff")&& h.src.match("switchoff"))
     {
@@ -670,8 +670,9 @@ function AddData()
     }
     if(i.src.match("switchoff")&& j.src.match("switchoff")&& k.src.match("switchon")&& l.src.match("switchoff"))
     {
-      a=b=d=e=0;
-      c=f=1;
+        b=c=d=0;
+     a=e=f=1;
+     
     }
    if(i.src.match("switchoff")&& j.src.match("switchon")&& k.src.match("switchoff")&& l.src.match("switchoff"))
     {
@@ -680,8 +681,8 @@ function AddData()
     }
    if(i.src.match("switchon")&& j.src.match("switchoff")&& k.src.match("switchoff")&& l.src.match("switchoff"))
     {
-     b=c=d=0;
-     a=e=f=1;
+    a=b=d=e=0;
+      c=f=1;
     }
    if(i.src.match("switchoff")&& j.src.match("switchoff")&& k.src.match("switchoff")&& l.src.match("switchoff"))
     {

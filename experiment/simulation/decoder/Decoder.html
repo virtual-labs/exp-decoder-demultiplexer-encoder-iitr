@@ -308,10 +308,10 @@ div.abc
 <p style="position: absolute; left:1038px; top: 410px"><b>R<sub>2</sub>: 330 ohm</b></p>
 <p style="position: absolute;left: 1038px; top: 460px"><b>R<sub>3</sub>: 330 ohm</b></p>
 <p style="position: absolute;left:1028px; top:630px"><b>GND</b></p>
-<p style="position:absolute;left:1170px;top:500px;"><b>Q<sub>3</sub></b></p>
-<p style="position: absolute;left:1170px;top:440px;"><b>Q<sub>2</sub></b></p>
-<p style="position:absolute;left:1170px;top:370px;"><b>Q<sub>1</sub></b></p>
-<p style="position: absolute;left:1170px;top:290px;"><b>Q<sub>0</sub></b></p>
+<p style="position:absolute;left:1170px;top:500px;"><b>Q<sub>0</sub></b></p>
+<p style="position: absolute;left:1170px;top:440px;"><b>Q<sub>1</sub></b></p>
+<p style="position:absolute;left:1170px;top:370px;"><b>Q<sub>2</sub></b></p>
+<p style="position: absolute;left:1170px;top:290px;"><b>Q<sub>3</sub></b></p>
 
 
 
@@ -592,7 +592,7 @@ function changeImage3()
       s=1;
        
        image.src = "switchon.png";
-       document.getElementById("Y0").src="on.png";
+       document.getElementById("Y3").src="on.png";
       
 
 
@@ -621,10 +621,10 @@ function Glow()
     var f = document.getElementById("A");
     if(e.src.match("switchoff")&& f.src.match("switchoff"))
     {
-       document.getElementById("Y3").src="off.png";
+       document.getElementById("Y3").src="on.png";
        document.getElementById("Y2").src="off.png";
        document.getElementById("Y1").src="off.png";
-       document.getElementById("Y0").src="on.png";     
+       document.getElementById("Y0").src="off.png";     
     }
     if(e.src.match("switchoff")&& f.src.match("switchon"))
     {
@@ -642,10 +642,10 @@ function Glow()
     }
     if(e.src.match("switchon")&& f.src.match("switchon"))
     {
-       document.getElementById("Y3").src="on.png";
+       document.getElementById("Y3").src="off.png";
        document.getElementById("Y2").src="off.png";
        document.getElementById("Y1").src="off.png";
-       document.getElementById("Y0").src="off.png";
+       document.getElementById("Y0").src="on.png";
     }
     
     
