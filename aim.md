@@ -1,0 +1,1 @@
+#### To analyse the truth table of 4 * 2 decoder/de-multiplexer using NOT (7404) and AND (7408) logic gate ICs and 2 * 4 encoder using OR (7432) logic gate IC and to understand the working of 4 * 2 decoder and 2 * 4 encoder circuit with the help of LEDs display.
